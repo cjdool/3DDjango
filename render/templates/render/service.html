@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Making</title>
+    <link href="/static/render/service.css" rel="stylesheet" type="text/css" />
+    <script src="/static/render/script.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<header>
+    <h2>Upload Your Own Image Zip File</h2>
+</header>
+<div class="container">
+    <div class="contr"><h2>You can select the file (image) and click Upload button</h2></div>
+
+    <div class="upload_form_cont">
+        <form id="upload_form" enctype="multipart/form-data" method="post">
+            <div>
+                <div><label for="email">Please enter your email address</label></div>
+                <div><input type="email" name="email" id="email"></div>
+            </div>
+            <div>
+                <div><label for="zip_file">Please select zip file</label></div>
+                <div><input type="file" name="zip_file" id="zip_file" onchange="fileSelected();" /></div>
+            </div>
+            <div>
+                <button type="submit" href="uploadFile();"/>Upload</button>
+            </div>
+            <div id="error">You should select valid zip files only!</div>
+            <div id="warnsize">Your file is very big. We can't accept it. Please select more small file</div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
