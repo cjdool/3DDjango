@@ -1,3 +1,5 @@
-render/static/
+render/static/ServiceImage
+render/static/node_modules
 db.sqlite3
 __pycache__/
+*.DS_Store
